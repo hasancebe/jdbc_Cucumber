@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.588">
+    <testcase classname="DB" name="Id find Test" time="1.291">
+        <system-out><![CDATA[Given Database baglantisi kurulur...........................................passed
+Given Students tablosundaki "secondName" ler yazdırılır.....................passed
+Given Glen listede "456"  nolu student kontrol edilir.......................passed
+Then Database baglantisikapatilir...........................................passed
+]]></system-out>
+    </testcase>
+</testsuite>

@@ -5,18 +5,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.sql.SQLException;
 public class DBUtils {
      static Connection connection;
     private static Statement statement;
     private static ResultSet resultSet;
+
     //BU METHOD COK KULLANACAGIZ
     //createConnection database e baglanmak icin. Burda url, username, password u kullanarak database baglaniyoruz
     //Database e ne zaman baglanmak isterse bu methodu cagrabiliriz
     //Bu method u data cok BeforeMethod icinde setup icin kullanacagiz
     public static void createConnection() {
-        String url="jdbc:mysql://45.84.206.41:3306/u480337000_tlb_training";
-        String username="u480337000_tbl_training_u";
-        String password="pO9#4bmxU";
+        String url=ConfigReader.getProperty("db_credential_url");
+        String username=ConfigReader.getProperty("db_username");
+        String password=ConfigReader.getProperty("db_password");
+
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
