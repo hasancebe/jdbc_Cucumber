@@ -43,11 +43,7 @@ public class StepDefinition extends DBUtils {
 
 
 
-    @Given("Students tablosundaki {string} ler yazdırılır.")
-    public void studentsTablosundakiLerYazdırılır(String istenenveri) {
-        studentsTableId=getColumnData("select * from  students",istenenveri);
-        System.out.println(studentsTableId.toString());
-    }
+
 
     @Given("Glen listede {string}  nolu student kontrol edilir")
     public void glenListedeNoluStudentKontrolEdilir(String id) {
