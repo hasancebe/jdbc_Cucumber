@@ -7,9 +7,27 @@ Feature: DB
 
     Given Database baglantisi kurulur.
     Given Students tablosundaki "secondName" ler yazdırılır.
-    Given Glen listede "<Id>"  nolu student kontrol edilir
+    Given Students tablosundaki "id" ler yazdırılır.
+    Given Gelen listede "<id>"  dogrulanir.
     Then Database baglantisikapatilir.
 
     Examples:
-    |Id   |
+    |id   |
     |456  |
+    |769  |
+    |741  |
+
+@t1
+Scenario Outline: güncellme testi
+
+    Given Database baglantisi kurulur.
+  And "<id>" numarasi verilen studentin "<city>" güncellenir.
+  And  Students tablosundaki city ler yazdırılır.
+  And "<city>" guncellendigi dogrulanir.
+  Then Database baglantisikapatilir.
+
+  Examples:
+    |id   |   |city|
+    |456  |   |ordu |
+    |769  |   |erzincan|
+    |985  |   |sivas|

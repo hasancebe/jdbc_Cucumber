@@ -211,4 +211,15 @@ public class DBUtils {
         }
         return columns;
     }
+
+    public static synchronized void update(String query) throws SQLException {
+        Statement st = connection.createStatement();
+        int ok = st.executeUpdate(query);
+        if (ok == -1) {
+            throw new SQLException("DB problem with query: " + query);
+        }
+        st.close();
+    }
+
+
 }

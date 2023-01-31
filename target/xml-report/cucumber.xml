@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="1.419">
-    <testcase classname="DB" name="Companies Test" time="1.073">
-        <failure message="class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')" type="java.lang.ClassCastException"><![CDATA[Given Database baglantisi kurulur...........................................passed
-And "Companies" tablosunun biligileri yazdirilir............................passed
-And "Companies" tablosundaki "name" tablosu yazdirilir......................passed
-And "numberof_person" 150 den fazla olanlar yazdırılır......................failed
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="1.637">
+    <testcase classname="DB" name="güncellme testi" time="1.013">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Database baglantisi kurulur...........................................passed
+And "456" numarasi verilen studentin "ordu" güncellenir.....................passed
+And Students tablosundaki "city" ler yazdırılır.............................undefined
+And "ordu" guncellendigi dogrulanir.........................................skipped
 Then Database baglantisikapatilir...........................................skipped
-
-StackTrace:
-java.lang.ClassCastException: class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')
-	at dbStepDefinition.StepDefinitionCompanies.den_fazla_olanlar_yazdırılır(StepDefinitionCompanies.java:35)
-	at ✽."numberof_person" 150 den fazla olanlar yazdırılır(file:///C:/Users/hasan/IdeaProjects/jdbcCucumber/./src/test/Resources/Companies1.feature:8)
+]]></failure>
+    </testcase>
+    <testcase classname="DB" name="güncellme testi 2" time="0.081">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Database baglantisi kurulur...........................................passed
+And "769" numarasi verilen studentin "erzincan" güncellenir.................passed
+And Students tablosundaki "city" ler yazdırılır.............................undefined
+And "erzincan" guncellendigi dogrulanir.....................................skipped
+Then Database baglantisikapatilir...........................................skipped
 ]]></failure>
     </testcase>
 </testsuite>
